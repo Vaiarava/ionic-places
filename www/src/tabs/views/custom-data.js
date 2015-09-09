@@ -1,6 +1,4 @@
 $stateProvider
-
-  // setup an abstract state for the tabs directive
     .state('parent', {
     	data: {
     		title: "fri",

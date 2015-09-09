@@ -9,7 +9,7 @@ angular.module('places')
 		$rootScope.$on('$stateChangeSuccess',
 			function(event, toState, toParams, fromState, fromParams){
 
-				$scope.title = toState.data."custom-data";
+				$scope.title = toState.data.title;
 
 			});
 
