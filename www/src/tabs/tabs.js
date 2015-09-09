@@ -24,7 +24,7 @@ angular.module('places')
 			.state('tab.add-place', {
 				url: '/add-place',
 				data:{
-					title:"Add place"
+					title:"add place"
 				},
 				views: {
 					'tab-add-place': {
@@ -35,7 +35,7 @@ angular.module('places')
 			.state('tab.around-me', {
 				url: '/around-me',
 				data:{
-					title:"Around me"
+					title:"around me"
 				},
 				views: {
 					'tab-around-me': {
@@ -46,7 +46,7 @@ angular.module('places')
 			.state('tab.friends', {
 				url: '/friends',
 				data:{
-					title:"Friends"
+					title:"friends"
 				},
 				views: {
 					'tab-friends': {
