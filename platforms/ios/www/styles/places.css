@@ -1,0 +1,26 @@
+/* custom styles in css */
+
+.logo{
+    text-align: center;
+    font-size:100px;
+    padding-bottom: 60px;
+}
+
+.bar-footer .button.button-block{
+    margin: 0;
+}
+
+map {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.scroll {
+    height: 100%;
+}
+
+.btn-mini{
+    height: 24px;
+    min-height: 24px;
+    line-height: 10px;
+}

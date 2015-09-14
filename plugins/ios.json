@@ -31,6 +31,10 @@
                         {
                             "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"iOSAudioPicker\"><param name=\"ios-package\" value=\"iOSAudioPicker\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -72,6 +76,12 @@
                             "xml": false,
                             "count": 1
                         }
+                    ],
+                    "MediaPlayer.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -102,6 +112,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "me.rahul.plugins.audio-picker": {
+            "PACKAGE_NAME": "com.ionicframework.places772438"
         }
     },
     "dependent_plugins": {}

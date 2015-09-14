@@ -62,6 +62,13 @@ module.exports = [
         "clobbers": [
             "CameraPopoverHandle"
         ]
+    },
+    {
+        "file": "plugins/me.rahul.plugins.audio-picker/www/iOSAudioPicker.js",
+        "id": "me.rahul.plugins.audio-picker.iOSAudioPicker",
+        "clobbers": [
+            "window.plugins.iOSAudioPicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -71,7 +78,8 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.1",
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
-    "cordova-plugin-camera": "1.2.0"
+    "cordova-plugin-camera": "1.2.0",
+    "me.rahul.plugins.audio-picker": "0.0.7"
 }
 // BOTTOM OF METADATA
 });

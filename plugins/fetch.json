@@ -46,5 +46,30 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-media": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-media"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "me.rahul.plugins.audio-picker": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/an-rahulpandey/ios-audio-picker.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "local",
+            "path": "plugins/org.apache.cordova.file"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
