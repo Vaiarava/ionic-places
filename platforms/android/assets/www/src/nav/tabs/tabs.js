@@ -75,6 +75,18 @@ angular.module('places')
 						controller:'FriendsCtrl'
 					}
 				}
+			})
+			.state('tab.media', {
+				url: '/media',
+				data:{
+					title:"Media"
+				},
+				views: {
+					'tab-media': {
+						templateUrl: 'src/places/media/media.html',
+						controller:'mediaCtrl'
+					}
+				}
 			});
 
 	});
