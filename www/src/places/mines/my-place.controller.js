@@ -4,7 +4,7 @@ angular.module('places')
 	.controller('MyPlaceCtrl', function($rootScope,$scope,$state) {
 
 		var list =[
-			this.get = function (maphoto) ;
+
 			{
 				name:'geneva',
 				description:'Cool place to see with great robots inside',

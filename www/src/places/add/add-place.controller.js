@@ -1,5 +1,5 @@
 angular.module('places')
-	.controller('AddPlaceCtrl', function($scope,$ionicPlatform, $cordovaCamera) {
+	.controller('AddPlaceCtrl', function($scope, $ionicPlatform, $cordovaCamera) {
 
 	$scope.imageSrc = "";
 
@@ -37,5 +37,6 @@ angular.module('places')
 		}
 
 	}
-$scope.photo= maphoto;
+
+
 });

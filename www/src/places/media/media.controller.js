@@ -13,11 +13,9 @@ angular.module('places')
     //var icloud = 'false'; // Will only show songs available locally on device.
 
     $scope.playsong = function() {
-      console.log('foo');
       console.log(Media);
-      var media = new Media("music/music/AU FIL DE L'HISTOIRE 30.10.2013.mp3", function() {});
       $cordovaMedia.play(media);
-      //console.log('foo');
+      
     }
 
 $scope.delmsong = function() {
