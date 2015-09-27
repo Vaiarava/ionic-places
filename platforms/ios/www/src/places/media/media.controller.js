@@ -19,15 +19,18 @@ angular.module('places')
       $cordovaMedia.play(media);
       //console.log('foo');
     }
+
+$scope.delmsong = function() {
+  document.querySelector('#titlebtn').innerHTML = '';
+  document.querySelector('#image').src = '';
+}
+
   });
 
 
 function success(data)
 {
   var filename = data[0]['exportedurl'];
-  if( device.platform === 'iOS' ) {
-    filename = filename.replace('file://', '');
-  }
   var title = data[0]['title'];
   var artist = data[0]['artist'];
   var imageData = data[0]['image'];
@@ -38,8 +41,6 @@ function success(data)
 
   var image = document.querySelector('#image');
   image.src = 'data:image/png;base64,' + imageData;
-  //image.width = '30px';
-  //image.height = '30px';
 
   var media = new Media(filename, function() {
       console.log('@@@@@@@@@@ song loaded');
@@ -50,7 +51,6 @@ function success(data)
       console.log(e);
     }
   );
-  media.play();
 }
 
 function error(e)

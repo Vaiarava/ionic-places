@@ -19,6 +19,12 @@ angular.module('places')
       $cordovaMedia.play(media);
       //console.log('foo');
     }
+
+$scope.delmsong = function() {
+  document.querySelector('#titlebtn').innerHTML = '';
+  document.querySelector('#image').src = '';
+}
+
   });
 
 
