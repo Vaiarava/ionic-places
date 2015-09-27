@@ -24,25 +24,33 @@ angular.module('places')
 
 function success(data)
 {
-  var filename = data[0]['ipodurl'];
+  var filename = data[0]['exportedurl'];
+  if( device.platform === 'iOS' ) {
+    filename = filename.replace('file://', '');
+  }
   var title = data[0]['title'];
   var artist = data[0]['artist'];
+  var imageData = data[0]['image'];
   document.querySelector('#titlebtn').innerHTML = title;
   console.log('--------------------------------');
   console.log(data);
   console.log('--------------------------------');
-  var media = new Media(filename, function() {});
-  /*
+
+  var image = document.querySelector('#image');
+  image.src = 'data:image/png;base64,' + imageData;
+  //image.width = '30px';
+  //image.height = '30px';
+
   var media = new Media(filename, function() {
       console.log('@@@@@@@@@@ song loaded');
       media.play();
     },
-    function() {
+    function(e) {
       console.log('@@@@@@@@@@ song error');
+      console.log(e);
     }
   );
-  */
-  //media.play();
+  media.play();
 }
 
 function error(e)
