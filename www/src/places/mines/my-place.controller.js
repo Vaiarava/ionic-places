@@ -61,4 +61,6 @@ angular.module('places')
 
 		$scope.ok = true;
 
+		$rootScope.maphoto = function(){}
+
 	});

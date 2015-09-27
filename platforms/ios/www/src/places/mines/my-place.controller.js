@@ -4,7 +4,7 @@ angular.module('places')
 	.controller('MyPlaceCtrl', function($rootScope,$scope,$state) {
 
 		var list =[
-			 
+
 			{
 				name:'geneva',
 				description:'Cool place to see with great robots inside',
@@ -60,5 +60,7 @@ angular.module('places')
 		$scope.list = list;
 
 		$scope.ok = true;
+
+		$rootScope.maphoto = function(){}
 
 	});
