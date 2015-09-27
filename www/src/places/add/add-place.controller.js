@@ -16,7 +16,7 @@ angular.module('places')
 			encodingType: Camera.EncodingType.JPEG,
 			targetWidth: 100,
 			targetHeight: 100,
-			saveToPhotoAlbum: false
+			saveToPhotoAlbum: true
 		};
 
 		// avoid promise to send null data if camera is not supported
@@ -37,5 +37,5 @@ angular.module('places')
 		}
 
 	}
-
+$scope.photo= maphoto;
 });

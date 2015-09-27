@@ -49,6 +49,7 @@ angular.module('places')
 					'tab-add-place': {
 						templateUrl: 'src/places/add/add-place.html',
 						controller:'AddPlaceCtrl'
+						
 					}
 				}
 			})
