@@ -8,25 +8,35 @@ angular.module('places')
     //var icloud = 'false'; // Will only show songs available locally on device.
 
     $scope.playsong = function() {
+      var media = new Media("music/music/AU FIL DE L'HISTOIRE 30.10.2013.mp3", function() {});
+      media.play();
       //console.log('foo');
-      document.querySelector('#debug').innerHTML = 'texte';
-      debugDiv = document.querySelector('#debug');
-      debugDiv.innerHTML = 'DEBUG PLAY SONG<br/>';
     }
   });
 
 
 function success(data)
 {
-  debugDiv = document.querySelector('#debug');
-  debugDiv.innerHTML = 'DEBUG<br/>' + JSON.stringify(data);
-  console.log(JSON.stringify(data));
+  var filename = data[0]['ipodurl'];
+  console.log('--------------------------------');
+  console.log(filename);
+  console.log('--------------------------------');
+  var media = new Media(filename, function() {});
+  /*
+  var media = new Media(filename, function() {
+      console.log('@@@@@@@@@@ song loaded');
+      media.play();
+    },
+    function() {
+      console.log('@@@@@@@@@@ song error');
+    }
+  );
+  */
+  //media.play();
 }
 
 function error(e)
     {
-      debugDiv = document.querySelector('#debug');
-      debugDiv.innerHTML = 'ERROR<br/>';
       console.log(e);
     }
 
