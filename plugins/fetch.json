@@ -66,8 +66,16 @@
     },
     "org.apache.cordova.file": {
         "source": {
-            "type": "local",
-            "path": "plugins/org.apache.cordova.file"
+            "type": "registry",
+            "id": "org.apache.cordova.file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.media": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.media"
         },
         "is_top_level": true,
         "variables": {}
