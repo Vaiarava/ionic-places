@@ -1,14 +1,16 @@
 
     <script type="text/javascript">
-        function onbodyload()
-        {
-            document.addEventListener("deviceready",onDeviceReady,false);
-        }
-        function onDeviceReady()
-        {
-            console.log("Device Ready Called");
-        }
+    function onbodyload()
+    {
+        document.addEventListener("deviceready",onDeviceReady,false);
+    }
+    function onDeviceReady()
+    {
+        console.log("Device Ready Called");
+    }
+
         </script>
+
 
         <div class="page-header">
             <h1 style="text-align:center;">iOS Audio Picker</h1>
@@ -16,6 +18,7 @@
         <div class="content">
         <div class="" style="margin:0 auto 100px;">
             <p>
+
             <button type="button" class="button button-block button-energized" ng-click="music()">
                 SELECT
 
@@ -26,13 +29,17 @@
 
             <button id="delMbtn" type="button" class="button button-block button-royal" ng-click="delmsong()" >
                 DELETE
+              </button>
+
+            <button id="titlebtn" type="button" class="button button-block button-light" >
+
             </button>
 
-            <button id="titlebtn" type="button" class="button button-block button-royal" >
+            <img id="image" width="280px" height="280px" />
 
-            </button>
 
-            <img id="image" width="100px" height="100px" />
             </p>
+
+
 
         </div>

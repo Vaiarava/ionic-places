@@ -1,6 +1,6 @@
 angular.module('places')
 	.controller('AddPlaceCtrl', function($rootScope, $scope, $ionicPlatform, $cordovaCamera) {
-$rootScope.maphoto = "imageSrc";
+
 	$scope.imageSrc = "";
 
 	$scope.openPicture = function(){
@@ -38,5 +38,8 @@ $rootScope.maphoto = "imageSrc";
 
 	}
 
+$scope.maphoto = function(){
+	console.log($rootScope.maphoto);
+}
 
 });

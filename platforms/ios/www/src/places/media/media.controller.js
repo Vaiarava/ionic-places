@@ -15,7 +15,7 @@ angular.module('places')
     $scope.playsong = function() {
       console.log(Media);
       $cordovaMedia.play(media);
-      
+
     }
 
 $scope.delmsong = function() {
@@ -55,7 +55,7 @@ function error(e)
     {
       console.log(e);
     }
-
+    
   /*
 	$scope.play = function() {
 		var src = "media";

@@ -58,9 +58,8 @@ angular.module('places')
 		}
 		//properties
 		$scope.list = list;
-
 		$scope.ok = true;
+		$rootScope.maphoto = 'hello'
 
-		$rootScope.maphoto = function(){}
 
 	});
