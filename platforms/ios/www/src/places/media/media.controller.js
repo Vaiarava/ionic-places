@@ -20,7 +20,7 @@ angular.module('places')
 
     $scope.delmsong = function() {
       document.querySelector('#titlebtn').innerHTML = '';
-      document.querySelector('#image')='';
+      document.querySelector('#image').src ='';
     }
 
   });

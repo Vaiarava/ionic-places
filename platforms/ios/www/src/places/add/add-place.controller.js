@@ -7,7 +7,7 @@ angular.module('places')
 
 		if(!$rootScope.newplaces){
 				$rootScope.newplaces =[]
-		}
+		};
 
 		$rootScope.newplaces.push({
 		name:'toto',

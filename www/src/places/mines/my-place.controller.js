@@ -53,9 +53,9 @@ angular.module('places')
 		];
 
 		//duplicate data to test performance
-		/*for (var i = 0; i < 5; i++) {
-		list = list.concat(list.slice(0))
-	}*/
+		//for (var i = 0; i < 5; i++) {
+		//list = list.concat(list.slice(0))
+	//}
 		//properties
 
 		$scope.list = list.concat($rootScope.newplaces);
