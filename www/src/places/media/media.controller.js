@@ -18,10 +18,10 @@ angular.module('places')
 
     }
 
-$scope.delmsong = function() {
-  document.querySelector('#titlebtn').innerHTML = '';
-  document.querySelector('#image').src = '';
-}
+    $scope.delmsong = function() {
+      document.querySelector('#titlebtn').innerHTML = '';
+      document.querySelector('#image')='';
+    }
 
   });
 
@@ -33,20 +33,16 @@ function success(data)
   var artist = data[0]['artist'];
   var imageData = data[0]['image'];
   document.querySelector('#titlebtn').innerHTML = title;
-  console.log('--------------------------------');
-  console.log(data);
-  console.log('--------------------------------');
 
   var image = document.querySelector('#image');
   image.src = 'data:image/png;base64,' + imageData;
 
   var media = new Media(filename, function() {
-      console.log('@@@@@@@@@@ song loaded');
       media.play();
     },
+
     function(e) {
-      console.log('@@@@@@@@@@ song error');
-      console.log(e);
+
     }
   );
 }
@@ -55,14 +51,5 @@ function error(e)
     {
       console.log(e);
     }
-    
-  /*
-	$scope.play = function() {
-		var src = "media";
-		var media = $cordovaMedia.newMedia(src).then(function() {
-			media.play();
-		}, function () {
-			// error
-		});
-  }*/
+
 });

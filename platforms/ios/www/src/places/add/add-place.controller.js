@@ -14,9 +14,7 @@ angular.module('places')
 		description:'toto',
 		image:$scope.imageSrc
 
-
-
-	});
+		});
 console.log ($rootScope.newplaces);
 		//console.log($rootScope.newplaces)
 	};
