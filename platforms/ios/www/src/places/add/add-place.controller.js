@@ -3,6 +3,24 @@ angular.module('places')
 
 	$scope.imageSrc = "";
 
+	$scope.maphoto = function () {
+
+		if(!$rootScope.newplaces){
+				$rootScope.newplaces =[]
+		}
+
+		$rootScope.newplaces.push({
+		name:'toto',
+		description:'toto',
+		image:$scope.imageSrc
+
+
+
+	});
+console.log ($rootScope.newplaces);
+		//console.log($rootScope.newplaces)
+	};
+
 	$scope.openPicture = function(){
 
 		//docs : http://ngcordova.com/docs/plugins/camera/
@@ -37,9 +55,5 @@ angular.module('places')
 		}
 
 	}
-
-$scope.maphoto = function(){
-	console.log($rootScope.maphoto);
-}
 
 });
