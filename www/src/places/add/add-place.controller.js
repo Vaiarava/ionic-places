@@ -5,17 +5,26 @@ angular.module('places')
 
 	$scope.maphoto = function () {
 
-		if(!$rootScope.newplaces){
-				$rootScope.newplaces =[]
-		};
+		// if(!$rootScope.newplaces){
+		// 		$rootScope.newplaces =[]
+		// };
 
-		$rootScope.newplaces.push({
+		var newPlaces = [];
+
+		// $rootScope.newplaces.push({
+		// name:'toto',
+		// description:'toto',
+		// image:$scope.imageSrc
+		//
+		// });
+		newPlaces.push({
 		name:'toto',
 		description:'toto',
 		image:$scope.imageSrc
 
 		});
-console.log ($rootScope.newplaces);
+		// console.log ($rootScope.newplaces);
+		$scope.$emit('listAdded', newPlaces);
 		//console.log($rootScope.newplaces)
 	};
 

@@ -534,7 +534,7 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaia.ionicframework.places772438;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.vaia.ionicframework.places;
 				PRODUCT_NAME = places;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -567,7 +567,7 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaia.ionicframework.places772438;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.vaia.ionicframework.places;
 				PRODUCT_NAME = places;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

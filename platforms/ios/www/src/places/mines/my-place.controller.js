@@ -63,4 +63,8 @@ angular.module('places')
 
 		$scope.ok = true;
 
+		$rootScope.$on('listAdded', function (data) {
+			$scope.list = list.concat(data);
+		});
+
 	});

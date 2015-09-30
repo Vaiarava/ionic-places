@@ -1,9 +1,11 @@
 angular.module('places')
 .controller('mediaCtrl', function($scope, $cordovaMedia, $ionicPlatform) {
-
+  $scope.loadedMedia = '';
+  $scope.imageSrc = '';
+  $scope.baseSrc = 'data:image/png;base64,';
   window.onerror = function(message, url, lineNumber) {
       console.log("Error: "+message+" in "+url+" at line "+lineNumber);
-    }
+  };
 
   $ionicPlatform.ready(function() {
     $scope.music=function(){
@@ -13,8 +15,9 @@ angular.module('places')
     //var icloud = 'false'; // Will only show songs available locally on device.
 
     $scope.playsong = function() {
-      console.log(Media);
-      $cordovaMedia.play(media);
+      console.log($scope.loadedMedia);
+      // TODO : MEDIA IS LOADED AS M4A AND NEEDS MP3 TO WORK
+      // $cordovaMedia.play($scope.loadedMedia);
 
     }
 
@@ -25,27 +28,30 @@ angular.module('places')
 
   });
 
-
-function success(data)
-{
+function success(data) {
+  console.log(data);
   var filename = data[0]['exportedurl'];
   var title = data[0]['title'];
   var artist = data[0]['artist'];
   var imageData = data[0]['image'];
   document.querySelector('#titlebtn').innerHTML = title;
 
-  var image = document.querySelector('#image');
-  image.src = 'data:image/png;base64,' + imageData;
+  // image = document.querySelector('#image');
+  // image.src = 'data:image/png;base64,' + imageData;
+  $scope.imageSrc = imageData;
 
-  var media = new Media(filename, function() {
-      media.play();
-    },
-
-    function(e) {
-
+  // TODO : TRYING TO CREATE A NEW MEDIA WITH M4A BUT NEEDS MP3
+  $scope.loadedMedia = new Media(filename, function() {
+      // media.play();
+    }, function(e) {
+      console.log(e);
     }
   );
 }
+
+$scope.$watch('imageSrc', function (oldVal, newVal) {
+  $scope.$apply();
+})
 
 function error(e)
     {
