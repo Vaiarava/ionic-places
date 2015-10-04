@@ -10,13 +10,9 @@ angular.module('places')
 		$scope.newPlace = {};
 
 		$scope.$emit('listAdded', toPush);
-		//console.log($rootScope.newplaces)
 	};
 
 	$scope.openPicture = function(){
-
-		//docs : http://ngcordova.com/docs/plugins/camera/
-		// https://github.com/apache/cordova-plugin-camera/#cameraoptions
 
 		var options = {
 			quality: 50,
@@ -29,8 +25,7 @@ angular.module('places')
 			saveToPhotoAlbum: true
 		};
 
-		// avoid promise to send null data if camera is not supported
-		// https://github.com/driftyco/ng-cordova/blob/master/src/plugins/camera.js
+
 		if(navigator.camera){
 
 			$cordovaCamera.getPicture(options).then(function(imageData) {
@@ -38,7 +33,7 @@ angular.module('places')
 				$scope.imageSrc  = "data:image/jpeg;base64," + imageData;
 
 			}, function(err) {
-				// error
+
 				alert("error : "+err);
 			});
 

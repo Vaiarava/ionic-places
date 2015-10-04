@@ -52,23 +52,13 @@ angular.module('places')
 			}
 		];
 
-		//duplicate data to test performance
-		//for (var i = 0; i < 5; i++) {
-		//list = list.concat(list.slice(0))
-	//}
-		//properties
-
 		$scope.list = list;
 
 
 		$scope.ok = true;
 
 		$rootScope.$on('listAdded', function (evt, data) {
-			console.log(evt);
-			console.log(data);
-			console.log($scope.list);
 			$scope.list.push(data);
-			console.log($scope.list);
-		});
+			});
 
 	});
