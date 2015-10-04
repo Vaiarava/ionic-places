@@ -1,12 +1,4 @@
 {
   "name": "places",
-  "app_id": "a8f656a2",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "app_id": ""
 }
