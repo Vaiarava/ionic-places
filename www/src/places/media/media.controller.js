@@ -2,7 +2,8 @@ angular.module('places')
 .controller('mediaCtrl', function($scope, $cordovaMedia, $ionicPlatform) {
   $scope.loadedMedia = '';
   $scope.imageSrc = '';
-  $scope.baseSrc = 'data:image/png;base64,';
+  //var baseSrc = 'data:image/png;base64,';
+  //$scope.fullSrc = baseSrc;
   window.onerror = function(message, url, lineNumber) {
       console.log("Error: "+message+" in "+url+" at line "+lineNumber);
   };
@@ -23,7 +24,7 @@ angular.module('places')
 
     $scope.delmsong = function() {
       document.querySelector('#titlebtn').innerHTML = '';
-      document.querySelector('#image').src ='';
+      document.querySelector('#image').src = 'data:image/png;base64,';
     }
 
   });
@@ -36,26 +37,29 @@ function success(data) {
   var imageData = data[0]['image'];
   document.querySelector('#titlebtn').innerHTML = title;
 
-  // image = document.querySelector('#image');
-  // image.src = 'data:image/png;base64,' + imageData;
-  $scope.imageSrc = imageData;
+  document.querySelector('#image').src = 'data:image/png;base64,' + imageData;
+
+//  $scope.fullSrc = baseSrc;
+  //$scope.fullSrc += imageData;
+
+//  console.log($scope.fullSrc);
 
   // TODO : TRYING TO CREATE A NEW MEDIA WITH M4A BUT NEEDS MP3
-  $scope.loadedMedia = new Media(filename, function() {
+  //$scope.loadedMedia = new Media(filename, function() {
       // media.play();
-    }, function(e) {
-      console.log(e);
-    }
-  );
+  //  }, function(e) {
+    //  console.log(e);
+    //});
 }
-
-$scope.$watch('imageSrc', function (oldVal, newVal) {
-  $scope.$apply();
-})
 
 function error(e)
     {
       console.log(e);
     }
 
+  //  $scope.$watch('fullSrc', function (newVal, oldVal) {
+    //console.log('new', newVal);
+    //console.log('old', oldVal);
+    //return $scope;
+  //});
 });

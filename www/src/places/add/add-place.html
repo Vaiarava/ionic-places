@@ -3,18 +3,17 @@
         <div class="list">
             <label class="item item-input item-floating-label">
                 <span class="input-label">Title</span>
-                <input type="text" placeholder="Title">
+                <input ng-model="newPlace.name" type="text" placeholder="Title">
             </label>
             <label class="item item-input item-floating-label">
                 <span class="input-label">Description</span>
-                <input type="text" placeholder="Description">
+                <input ng-model="newPlace.description" type="text" placeholder="Description">
             </label>
 
             <div class="padding">
                 <button class="button button-block icon-right ion-camera activated"
                         ng-click="openPicture()">Take a picture</button>
             </div>
-
             <div class="padding">
                 <img ng-src="{{imageSrc}}" width="100px" height="100px">
             </div>

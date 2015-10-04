@@ -2,11 +2,9 @@
     <ion-content class="has-header">
         <div class="list">
             <a class="item item-thumbnail-left"
-               collection-repeat="item in list track by $index"
-               collection-item-height="100"
-               collection-item-width="'100%'">
+               ng-repeat="item in list track by $index">
                 <img ng-src="{{item.image}}">
-                <h2>{{item.name}} {{$index}}</h2>
+                <h2>{{item.name}}</h2>
                 <p>{{item.description}}</p>
             </a>
         </div>

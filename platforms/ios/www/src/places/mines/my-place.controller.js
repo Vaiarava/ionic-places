@@ -58,13 +58,17 @@ angular.module('places')
 	//}
 		//properties
 
-		$scope.list = list.concat($rootScope.newplaces);
+		$scope.list = list;
 
 
 		$scope.ok = true;
 
-		$rootScope.$on('listAdded', function (data) {
-			$scope.list = list.concat(data);
+		$rootScope.$on('listAdded', function (evt, data) {
+			console.log(evt);
+			console.log(data);
+			console.log($scope.list);
+			$scope.list.push(data);
+			console.log($scope.list);
 		});
 
 	});

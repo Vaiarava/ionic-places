@@ -2,29 +2,14 @@ angular.module('places')
 	.controller('AddPlaceCtrl', function($rootScope, $scope, $ionicPlatform, $cordovaCamera) {
 
 	$scope.imageSrc = "";
+	$scope.newPlace = {};
 
 	$scope.maphoto = function () {
+		$scope.newPlace.image = $scope.imageSrc;
+		var toPush = $scope.newPlace;
+		$scope.newPlace = {};
 
-		// if(!$rootScope.newplaces){
-		// 		$rootScope.newplaces =[]
-		// };
-
-		var newPlaces = [];
-
-		// $rootScope.newplaces.push({
-		// name:'toto',
-		// description:'toto',
-		// image:$scope.imageSrc
-		//
-		// });
-		newPlaces.push({
-		name:'toto',
-		description:'toto',
-		image:$scope.imageSrc
-
-		});
-		// console.log ($rootScope.newplaces);
-		$scope.$emit('listAdded', newPlaces);
+		$scope.$emit('listAdded', toPush);
 		//console.log($rootScope.newplaces)
 	};
 
